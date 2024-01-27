@@ -1,0 +1,24 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "Its a ToDo website. Tech Stack Used : HTML CSS Javascript and Jquery - for frontend | Nodejs expressjs ejs - for backend | postgreSQL - for database ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "todo_app"
+  },
+  "author": "Yogesh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3",
+    "pg": "^8.11.3",
+    "uuid": "^9.0.1"
+  }
+}

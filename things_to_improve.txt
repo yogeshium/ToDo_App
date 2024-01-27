@@ -1,0 +1,7 @@
+-> New Task ka button ko center krna hai
+-> Font change krna hai
+-> jab tasks boht saare ho jaye mtlb jab scrolling aa jaye to 'New Task wala form' sticky rahe bottom mai
+-> Scroll bar ko acha banana hai
+
+
+->Multi user and Multi- days ke liye bnana hai

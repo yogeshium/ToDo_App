@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>TO-DO App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="date">
+           <span>Today</span>
+        </div>
+        <div class="task-container" >
+            <%for(let i=0;i<task.length;i++){%>
+                <form class="task" method="POST" action="/update">
+                    <input type="checkbox" class="checkIcon">
+                    <input type="text" name="id" value="<%=task[i].id%>" hidden>
+                    <textarea class="taskText" name="updatedTask" rows="2" id="<%=task[i].id%>" readonly><%=task[i].task_name%></textarea>
+                    <img src="icons/edit_icon.png" alt="" class="editIcon">
+                    <img src="icons/bin_icon.png"  alt="" class="removeIcon">
+                    <input type="submit" hidden>                                           <!-- Agr edit Icon click ho to ye submit button fire ho-->
+                    <input type="submit" formaction="/delete" id="<%=task[i].id%>" hidden> <!-- Agr removeIcon click ho to ye input fire ho-->
+                </form> 
+            <%}%>
+            
+            
+            <form action="/new" method="POST" class="task">
+                <input type="text" name="newTask" class="newTask" placeholder="New Task">
+                <button type="submit" id="">+</button>
+            </form>
+        </div>
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+    <script src="scripts/script.js" type="application/javascript"></script>
+</body>
+</html>
